@@ -46,4 +46,10 @@ export const SubmitButton = styled.button.attrs({
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: ease 0.6s;
+
+  &:hover {
+    background-color: #73c376;
+    transition: ease 0.6s;
+  }
 `;
