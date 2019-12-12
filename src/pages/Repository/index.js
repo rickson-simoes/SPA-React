@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import propTypes from 'prop-types';
 import api from '../../services/api';
 
+import Container from '../../Components/Container';
+import { Loading } from './styles';
+
 export default class Repository extends Component {
+  // eslint-disable-next-line react/static-property-placement
   static propTypes = {
     match: propTypes.shape({
       params: propTypes.shape({
@@ -11,6 +15,7 @@ export default class Repository extends Component {
     }).isRequired
   };
 
+  // eslint-disable-next-line react/state-in-constructor
   state = {
     repository: {},
     issues: [],
@@ -42,6 +47,10 @@ export default class Repository extends Component {
   render() {
     const { repository, issues, loading } = this.state;
 
-    return <h1>Repository</h1>;
+    if (loading) {
+      return <Loading> Carregando... </Loading>;
+    }
+
+    return <Container>Repository</Container>;
   }
 }
