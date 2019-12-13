@@ -9,3 +9,9 @@ export const Loading = styled.div`
   align-items: center;
   height: 100vh;
 `;
+
+export const Owner = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
