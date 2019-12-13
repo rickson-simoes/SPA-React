@@ -1,7 +1,12 @@
 Projeto iniciado com: [Create React App](https://github.com/facebook/create-react-app).
 
 **No diretório do projeto, execute o comando:**
+### `yarn`
+Para executar a instalação das dependências.
+<br />
+
 ### `yarn start`
+Para executar o projeto
 
 <br />
 Abra a página: (http://localhost:3000) para ver o projeto no seu navegador.
