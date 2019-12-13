@@ -3,7 +3,7 @@ Projeto iniciado com: [Create React App](https://github.com/facebook/create-reac
 **No diretório do projeto, execute o comando:**
 ### `yarn start`
 
-Runs the app in the development mode.<br />
+<br />
 Abra a página: [http://localhost:3000](http://localhost:3000) para ver o projeto no seu navegador.
 
 [![Exemplo1](https://raw.githubusercontent.com/rickson-simoes/Projeto_SPA_React/master/img_exemplos/exemplo1.png "Exemplo1")](https://raw.githubusercontent.com/rickson-simoes/Projeto_SPA_React/master/img_exemplos/exemplo1.png "Exemplo1")
