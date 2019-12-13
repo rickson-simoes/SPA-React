@@ -4,7 +4,7 @@ Projeto iniciado com: [Create React App](https://github.com/facebook/create-reac
 ### `yarn start`
 
 <br />
-Abra a página: http://localhost:3000 para ver o projeto no seu navegador.
+Abra a página: `http://localhost:3000` para ver o projeto no seu navegador.
 
 [![Exemplo1](https://raw.githubusercontent.com/rickson-simoes/Projeto_SPA_React/master/img_exemplos/exemplo1.png "Exemplo1")](https://raw.githubusercontent.com/rickson-simoes/Projeto_SPA_React/master/img_exemplos/exemplo1.png "Exemplo1")
 
