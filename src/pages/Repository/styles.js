@@ -34,4 +34,10 @@ export const Owner = styled.div`
     text-align: center;
     max-width: 400px;
   }
+
+  a {
+    color: #7159c1;
+    text-decoration: none;
+    font-size: 16px;
+  }
 `;
