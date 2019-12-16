@@ -37,23 +37,28 @@ export default class Main extends Component {
   };
 
   handleSubmit = async e => {
-    e.preventDefault();
+    try {
+      e.preventDefault();
 
-    this.setState({ loading: true });
+      this.setState({ loading: true });
 
-    const { newRepo, repositories } = this.state;
+      const { newRepo, repositories } = this.state;
 
-    const response = await api.get(`/repos/${newRepo}`);
+      const response = await api.get(`/repos/${newRepo}`);
 
-    const data = {
-      name: response.data.full_name
-    };
+      const data = {
+        name: response.data.full_name
+      };
 
-    this.setState({
-      repositories: [...repositories, data],
-      newRepo: '',
-      loading: false
-    });
+      this.setState({
+        repositories: [...repositories, data],
+        newRepo: '',
+        loading: false
+      });
+    } catch (err) {
+      this.setState({ loading: false });
+      console.log(`${err}`);
+    }
   };
 
   render() {
