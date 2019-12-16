@@ -36,6 +36,14 @@ export default class Main extends Component {
     this.setState({ newRepo: e.target.value });
   };
 
+  handleDelete = repository => {
+    const { repositories } = this.state;
+
+    this.setState({
+      repositories: repositories.filter(newR => newR !== repository)
+    });
+  };
+
   handleSubmit = async e => {
     try {
       e.preventDefault();
@@ -93,6 +101,12 @@ export default class Main extends Component {
           {repositories.map(repository => (
             <li key={repository.name}>
               <span>{repository.name}</span>
+              <button
+                type="button"
+                onClick={() => this.handleDelete(repository)}
+              >
+                Deletar
+              </button>
               <Link to={`/repository/${encodeURIComponent(repository.name)}`}>
                 Detalhes
               </Link>
