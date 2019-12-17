@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FaGithubAlt, FaPlus, FaSpinner } from 'react-icons/fa';
+import { MdDelete } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
@@ -101,15 +102,19 @@ export default class Main extends Component {
           {repositories.map(repository => (
             <li key={repository.name}>
               <span>{repository.name}</span>
-              <button
-                type="button"
-                onClick={() => this.handleDelete(repository)}
-              >
-                Deletar
-              </button>
-              <Link to={`/repository/${encodeURIComponent(repository.name)}`}>
-                Detalhes
-              </Link>
+
+              <div>
+                <Link to={`/repository/${encodeURIComponent(repository.name)}`}>
+                  Detalhes
+                </Link>
+
+                <button
+                  type="button"
+                  onClick={() => this.handleDelete(repository)}
+                >
+                  <MdDelete />
+                </button>
+              </div>
             </li>
           ))}
         </List>

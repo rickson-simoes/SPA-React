@@ -75,6 +75,23 @@ export const List = styled.ul`
     a {
       color: #7159c1;
       text-decoration: none;
+      margin-right: 20px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      button {
+        border-style: none;
+        background-color: rgba(0, 0, 0, 0);
+
+        svg {
+          width: 20px;
+          height: auto;
+        }
+      }
     }
   }
 `;
