@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
 import Container from '../../Components/Container';
-import { Form, SubmitButton, List } from './styles';
+import { Form, SubmitButton, List, RepoNotFound } from './styles';
 
 export default class Main extends Component {
   // eslint-disable-next-line react/state-in-constructor
@@ -98,6 +98,10 @@ export default class Main extends Component {
             )}
           </SubmitButton>
         </Form>
+
+        <RepoNotFound error={error ? 1 : 0} hidden>
+          {error ? 'Repositório não encontrado' : null}
+        </RepoNotFound>
 
         <List>
           {repositories.map(repository => (

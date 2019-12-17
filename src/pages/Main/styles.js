@@ -16,6 +16,25 @@ export const Form = styled.form`
   }
 `;
 
+export const RepoNotFound = styled.span.attrs(props => ({
+  error: props.error
+}))`
+  ${props =>
+    props.error &&
+    css`
+      color: #eee;
+      background-color: #e87d7d;
+      height: 25px;
+      display: inline-flex;
+      margin-top: 10px;
+      align-items: center;
+      padding: 10px;
+      border-radius: 10px;
+      position: absolute;
+      align-content: center;
+    `}
+`;
+
 const rotate = keyframes`
 from {
 transform: rotate(0deg);
@@ -61,7 +80,7 @@ export const SubmitButton = styled.button.attrs(props => ({
 `;
 export const List = styled.ul`
   list-style: none;
-  margin-top: 30px;
+  margin-top: 40px;
 
   li {
     padding: 15px 0;
