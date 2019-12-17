@@ -66,13 +66,13 @@ export default class Main extends Component {
         loading: false
       });
     } catch (err) {
-      this.setState({ loading: false });
+      this.setState({ loading: false, error: true });
       console.log(`${err}`);
     }
   };
 
   render() {
-    const { newRepo, repositories, loading } = this.state;
+    const { newRepo, repositories, loading, error } = this.state;
 
     return (
       <Container>
@@ -81,7 +81,7 @@ export default class Main extends Component {
           Repositórios
         </h1>
 
-        <Form onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleSubmit} error={error}>
           <input
             type="text"
             placeholder="Adicionar repositório"
