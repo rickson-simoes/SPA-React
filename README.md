@@ -18,3 +18,13 @@ Abra a página: (http://localhost:3000) para ver o projeto no seu navegador.
 [![Exemplo4](https://raw.githubusercontent.com/rickson-simoes/Projeto_SPA_React/master/img_exemplos/exemplo4.png "Exemplo4")](https://raw.githubusercontent.com/rickson-simoes/Projeto_SPA_React/master/img_exemplos/exemplo4.png "Exemplo4")
 
 [![Exemplo3](https://raw.githubusercontent.com/rickson-simoes/Projeto_SPA_React/master/img_exemplos/exemplo3.png "Exemplo3")](https://raw.githubusercontent.com/rickson-simoes/Projeto_SPA_React/master/img_exemplos/exemplo3.png "Exemplo3")
+
+
+### **Atualizações**
+
+- Ao adicionar um repositório que não existe, a borda do input fica vermelha junto com um label abaixo.
+- Deletar repositório
+
+<br />
+
+[![Exemplo5](https://raw.githubusercontent.com/rickson-simoes/Projeto_SPA_React/master/img_exemplos/Exemplo5.png "Exemplo5")](https://raw.githubusercontent.com/rickson-simoes/Projeto_SPA_React/master/img_exemplos/exemplo3.png "Exemplo5")
