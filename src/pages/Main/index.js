@@ -12,7 +12,8 @@ export default class Main extends Component {
   state = {
     newRepo: '',
     repositories: [],
-    loading: false
+    loading: false,
+    error: null
   };
 
   // carrega os dados do localStorage
@@ -46,11 +47,11 @@ export default class Main extends Component {
   };
 
   handleSubmit = async e => {
+    e.preventDefault();
+
+    this.setState({ loading: true, error: false });
+
     try {
-      e.preventDefault();
-
-      this.setState({ loading: true });
-
       const { newRepo, repositories } = this.state;
 
       const response = await api.get(`/repos/${newRepo}`);
