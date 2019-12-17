@@ -25,6 +25,4 @@ Abra a página: (http://localhost:3000) para ver o projeto no seu navegador.
 - Ao adicionar um repositório que não existe, a borda do input fica vermelha junto com um label abaixo.
 - Deletar repositório
 
-<br />
-
-[![Exemplo5](https://raw.githubusercontent.com/rickson-simoes/Projeto_SPA_React/master/img_exemplos/Exemplo5.png "Exemplo5")](https://raw.githubusercontent.com/rickson-simoes/Projeto_SPA_React/master/img_exemplos/exemplo5.png "Exemplo5")
+[![Exemplo5](https://raw.githubusercontent.com/rickson-simoes/Projeto_SPA_React/master/img_exemplos/exemplo5.png "Exemplo5")](https://raw.githubusercontent.com/rickson-simoes/Projeto_SPA_React/master/img_exemplos/exemplo5.png "Exemplo5")
