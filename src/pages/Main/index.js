@@ -70,7 +70,9 @@ export default class Main extends Component {
       });
     } catch (err) {
       console.log(err.message);
-      this.setState({ loading: false, error: true });
+      this.setState({ error: true });
+    } finally {
+      this.setState({ loading: false });
     }
   };
 
