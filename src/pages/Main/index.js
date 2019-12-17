@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FaGithubAlt, FaPlus, FaSpinner } from 'react-icons/fa';
-import { MdDelete } from 'react-icons/md';
+import { MdDeleteSweep } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
@@ -112,7 +112,7 @@ export default class Main extends Component {
                   type="button"
                   onClick={() => this.handleDelete(repository)}
                 >
-                  <MdDelete />
+                  <MdDeleteSweep />
                 </button>
               </div>
             </li>
