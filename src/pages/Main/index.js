@@ -54,6 +54,10 @@ export default class Main extends Component {
     try {
       const { newRepo, repositories } = this.state;
 
+      const hasRepo = repositories.find(r => r.name === newRepo);
+
+      if (hasRepo) throw new Error('Repositório duplicado');
+
       const response = await api.get(`/repos/${newRepo}`);
 
       const data = {
@@ -62,12 +66,11 @@ export default class Main extends Component {
 
       this.setState({
         repositories: [...repositories, data],
-        newRepo: '',
-        loading: false
+        newRepo: ''
       });
     } catch (err) {
+      console.log(err.message);
       this.setState({ loading: false, error: true });
-      console.log(`${err}`);
     }
   };
 
@@ -99,8 +102,8 @@ export default class Main extends Component {
           </SubmitButton>
         </Form>
 
-        <RepoNotFound error={error ? 1 : 0} hidden>
-          {error ? 'Repositório não encontrado' : null}
+        <RepoNotFound error={error ? 1 : 0}>
+          {error ? 'Repositório não encontrado ou duplicado' : null}
         </RepoNotFound>
 
         <List>
