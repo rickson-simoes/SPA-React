@@ -20,11 +20,20 @@ export default class Repository extends Component {
   state = {
     repository: {},
     issues: [],
-    loading: true
+    loading: true,
+    filters: [
+      { state: 'all', label: 'todos', active: false },
+      { state: 'open', label: 'aberto', active: false },
+      { state: 'closed', label: 'fechado', active: true }
+    ],
+    filterindex: 0,
+    page: 1
   };
 
   async componentDidMount() {
     const { match } = this.props;
+
+    const { filters } = this.state;
 
     const repoName = decodeURIComponent(match.params.repository);
 
@@ -32,7 +41,7 @@ export default class Repository extends Component {
       api.get(`/repos/${repoName}`),
       api.get(`/repos/${repoName}/issues`, {
         params: {
-          state: 'open',
+          state: filters.find(f => f.active).state,
           per_page: 5
         }
       })
@@ -60,6 +69,12 @@ export default class Repository extends Component {
           <h1>{repository.name}</h1>
           <p>{repository.description}</p>
         </Owner>
+
+        <select name="state">
+          <option value="all"> All </option>
+          <option value="open"> Open </option>
+          <option value="closed"> Closed </option>
+        </select>
 
         <IssueList>
           {issues.map(issue => (
