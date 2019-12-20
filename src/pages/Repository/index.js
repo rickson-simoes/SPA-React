@@ -68,6 +68,8 @@ export default class Repository extends Component {
       }
     });
 
+    console.log(response);
+
     this.setState({ issues: response.data });
   };
 
