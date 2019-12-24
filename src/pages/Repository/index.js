@@ -7,7 +7,6 @@ import Container from '../../Components/Container';
 import { Loading, Owner, IssueList, IssueFilter, PageActions } from './styles';
 
 export default class Repository extends Component {
-  // eslint-disable-next-line react/static-property-placement
   static propTypes = {
     match: propTypes.shape({
       params: propTypes.shape({
@@ -16,7 +15,6 @@ export default class Repository extends Component {
     }).isRequired
   };
 
-  // eslint-disable-next-line react/state-in-constructor
   state = {
     repository: {},
     issues: [],
@@ -67,8 +65,6 @@ export default class Repository extends Component {
         page
       }
     });
-
-    console.log(response);
 
     this.setState({ issues: response.data });
   };
